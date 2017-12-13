@@ -1,2 +1,2 @@
 # SpringBootMybatis
-不想重复造轮子
+不想重复造轮子，所以会在项目中集成一些平时用的Utils
