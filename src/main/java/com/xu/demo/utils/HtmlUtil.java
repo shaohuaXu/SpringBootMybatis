@@ -55,7 +55,6 @@ public class HtmlUtil {
 	 * @param html
 	 * @param paras：参数集合
 	 * @return
-	 * @Author masl - 2017/9/29 14:05
 	 */
 	public static String replaceTextById(String html, HashMap<String, String> paras) {
 		if (paras == null || paras.size() == 0) {
@@ -63,7 +62,7 @@ public class HtmlUtil {
 		}
 		Document doc = getDocument(html);
 		for (String id : paras.keySet()) {
-			//不包含 id
+			// 不包含 id
 			if (!html.contains("id=\"" + id + "\"") && !html.contains("id='" + id + "'")) {
 				continue;
 			}
