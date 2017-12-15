@@ -8,3 +8,5 @@
 * 2017年12月14日 
     * 新增SftpUtil和TimeUtil工具类
     * 新增FastDFS-Client上传、下载功能
+* 2017年12月15日
+    * 新增爬虫功能，基于webMagic
