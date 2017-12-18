@@ -7,7 +7,7 @@ import us.codecraft.webmagic.pipeline.JsonFilePipeline;
 import us.codecraft.webmagic.processor.PageProcessor;
 
 /**
- * 描述
+ * 抓取新浪博客数据eg
  *
  * @author xushaohua on 2017-12-15.
  */
@@ -25,11 +25,11 @@ public class SinaBlogPageProcessor implements PageProcessor {
 
 	@Override
 	public void process(Page page) {
-		//列表页
+		// 列表页
 		if (page.getUrl().regex(URL_LIST).match()) {
 			page.addTargetRequests(page.getHtml().xpath("//div[@class=\"articleList\"]").links().regex(URL_POST).all());
 			page.addTargetRequests(page.getHtml().links().regex(URL_LIST).all());
-			//文章页
+			// 文章页
 		} else {
 			page.putField("title", page.getHtml().xpath("//div[@class='articalTitle']/h2"));
 			page.putField("content", page.getHtml().xpath("//div[@id='articlebody']//div[@class='articalContent']"));
