@@ -3,5 +3,9 @@ spring:
     url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&autoReconnect=true
     username: root
     password: root
+  # 设置生效的配置文件
+  profiles:
+    active: devo
+
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
