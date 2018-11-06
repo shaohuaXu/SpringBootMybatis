@@ -10,4 +10,5 @@ import com.xu.demo.model.User;
 public interface UserService {
 	User findOne(User user) throws Exception;
 	void add(User user) throws Exception;
+	void updateUser(int id);
 }

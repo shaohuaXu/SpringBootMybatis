@@ -24,9 +24,15 @@ public class UserCtrl {
 			user.setId(1);
 			User userResult = userService.findOne(user);
 			System.out.println(userResult.getName());
-			System.out.println(userResult.getPassword());
+			//System.out.println(userResult.getPassword());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	@RequestMapping(value = "updateUser")
+	public void updateUser(){
+		userService.updateUser(1);
+		System.out.println("执行成功！");
 	}
 }

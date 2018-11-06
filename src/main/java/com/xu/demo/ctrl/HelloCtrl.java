@@ -2,6 +2,7 @@ package com.xu.demo.ctrl;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author xushaohua on 2017-12-18.
  */
 @Controller
+
+@ControllerAdvice
 @RequestMapping("/api/hello")
 public class HelloCtrl {
 	@RequestMapping("index")

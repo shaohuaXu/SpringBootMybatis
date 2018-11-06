@@ -5,6 +5,7 @@ import com.xu.demo.model.User;
 import com.xu.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 描述
@@ -25,5 +26,15 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void add(User user) throws Exception {
 
+	}
+
+	@Override
+	@Transactional
+	public void updateUser(int id) {
+		User user = new User();
+		user.setId(id);
+		user = userDao.findOne(user);
+		user.setAge("300");
+		userDao.updateUser(user);
 	}
 }

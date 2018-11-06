@@ -1,5 +1,7 @@
 package com.xu.demo.model;
 
+import java.math.BigDecimal;
+
 /**
  * t_user表
  *
@@ -8,7 +10,9 @@ package com.xu.demo.model;
 public class User {
 	private Integer id;
 	private String name;
-	private String password;
+	//private String password;
+	private BigDecimal money;
+	private String age;
 
 	public Integer getId() {
 		return id;
@@ -26,11 +30,27 @@ public class User {
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
+	//public String getPassword() {
+	//	return password;
+	//}
+    //
+	//public void setPassword(String password) {
+	//	this.password = password;
+	//}
+
+	public BigDecimal getMoney() {
+		return money;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setMoney(BigDecimal money) {
+		this.money = money;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
 	}
 }
