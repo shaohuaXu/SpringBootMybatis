@@ -20,11 +20,11 @@ public class JacksonCtrl {
     JacksonSerializer jacksonSerializer;
 
     @RequestMapping(value = "testJackson")
-    public void testJackson() {
+    public String testJackson() {
         User user = new User();
         user.setAge("18");
         user.setMoney(new BigDecimal("58.32"));
         user.setName("world");
-        System.out.println(jacksonSerializer.serialize(user));
+        return jacksonSerializer.serialize(user);
     }
 }
