@@ -1,2 +1,16 @@
 server:
   port: 8080
+
+##服务器配置
+#spring:
+#  application:
+#    name: rabbitmq-hello-receiving
+#  #rabbitmq连接参数
+#  rabbitmq:
+#    host: 192.168.0.51
+#    port: 5672
+#    username: admin
+#    password: admin
+#    #rabbitmq消息确认
+#    publisher-confirms: true
+#    publisher-returns: true
