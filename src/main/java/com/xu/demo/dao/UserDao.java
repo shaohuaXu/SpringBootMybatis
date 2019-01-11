@@ -10,7 +10,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserDao {
-	User findOne(User user);
 
-	void updateUser(User user);
+    User findOne(User user);
+
+    void updateUser(User user);
 }

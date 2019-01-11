@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 /**
  * 描述
  *
@@ -15,26 +16,25 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	UserDao userDao;
+    @Autowired
+    UserDao userDao;
 
-	@Override
-	public User findOne(User user) throws Exception {
-		return userDao.findOne(user);
-	}
+    @Override
+    public User findOne(User user) throws Exception {
+        return userDao.findOne(user);
+    }
 
-	@Override
-	public void add(User user) throws Exception {
+    @Override
+    public void add(User user) throws Exception {
+    }
 
-	}
-
-	@Override
-	@Transactional
-	public void updateUser(int id) {
-		User user = new User();
-		user.setId(id);
-		user = userDao.findOne(user);
-		user.setAge("300");
-		userDao.updateUser(user);
-	}
+    @Override
+    @Transactional
+    public void updateUser(int id) {
+        User user = new User();
+        user.setId(id);
+        user = userDao.findOne(user);
+        user.setAge("300");
+        userDao.updateUser(user);
+    }
 }
