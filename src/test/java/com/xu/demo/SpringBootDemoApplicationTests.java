@@ -40,4 +40,20 @@ public class SpringBootDemoApplicationTests {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void getMonthDays() {
+        /**
+         * 表驱动法是一种编程模式（scheme）--从表里面查找信息而不使用逻辑语句（if和case）。事实上，凡是能通过逻辑语句来获得的事物，都可以通过查表来获得。
+         * 对简单的情况而言，使用逻辑语句更为容易和直白。但随着逻辑链的越来越复杂，查表法也就愈发显得更具吸引力。
+         */
+        int month = 6;
+        log.info("当前月份：{}，当月天数：{}", month, getMonthDays(month));
+    }
+
+
+    private int getMonthDays(int month) {
+        int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        return monthDays[--month];
+    }
 }
