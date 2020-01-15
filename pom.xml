@@ -163,6 +163,12 @@
             <version>0.4.8</version>
         </dependency>
 
+        <!--集成JavaMailSender-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

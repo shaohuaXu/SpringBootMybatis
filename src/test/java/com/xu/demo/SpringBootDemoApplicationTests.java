@@ -1,10 +1,13 @@
 package com.xu.demo;
 
+import com.xu.demo.utils.SendMail;
 import lombok.extern.slf4j.Slf4j;
 import net.coobird.thumbnailator.Thumbnails;
 import org.joda.time.DateTime;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,18 +17,23 @@ import java.io.IOException;
 @SpringBootTest
 @Slf4j
 public class SpringBootDemoApplicationTests {
+    @Autowired
+    SendMail sendMail;
 
     @Test
+    @Ignore
     public void contextLoads() {
     }
 
     @Test
+    @Ignore
     public void jodaTest() {
         DateTime dateTime = new DateTime();
         System.out.println(dateTime.dayOfYear().get());
     }
 
     @Test
+    @Ignore
     public void imageTest() {
         try {
             //BufferedImage bufferedImage = Thumbnails.of("D:\\a.jpg").size(1280, 1024).asBufferedImage();
@@ -42,6 +50,7 @@ public class SpringBootDemoApplicationTests {
     }
 
     @Test
+    @Ignore
     public void getMonthDays() {
         /**
          * 表驱动法是一种编程模式（scheme）--从表里面查找信息而不使用逻辑语句（if和case）。事实上，凡是能通过逻辑语句来获得的事物，都可以通过查表来获得。
@@ -55,5 +64,13 @@ public class SpringBootDemoApplicationTests {
     private int getMonthDays(int month) {
         int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         return monthDays[--month];
+    }
+
+    @Test
+    public void sendMailTest() {
+        //sendMail.sendMail();
+        //sendMail.sendMailWilthAttachment();
+        //sendMail.sendMailWithStaticResource();
+        sendMail.sendMail2();
     }
 }

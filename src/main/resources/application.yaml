@@ -3,9 +3,18 @@ spring:
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true
     username: root
     password: root
-  # 设置生效的配置文件
+
+  #设置生效的配置文件
   profiles:
     active: devo
+
+  #JavaMailSender配置
+  mail:
+    host: smtp.163.com
+    username: 18610907663@163.com
+    password: 20090221@xiaoyu!
+    default-encoding: UTF-8
+
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
@@ -16,3 +25,4 @@ pagehelper:
   support-methods-arguments: true
   params: count==countSql
   page-size-zero: true
+
